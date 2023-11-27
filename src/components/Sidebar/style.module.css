@@ -1,0 +1,107 @@
+aside {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  z-index: 1;
+  height: 100%;
+  background-color: rgb(255 255 255 / 1);
+  padding: 16px 8px;
+  transition: left 1s;
+  width: 200px;
+}
+
+aside.open {
+  left: 0;
+  transition: left 1s;
+}
+
+aside header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+aside header span {
+  font-size: 1.3rem;
+}
+
+aside .close-button {
+  color: #333;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+aside .close-button:hover {
+  color: tomato;
+}
+
+aside section {
+  margin-top: 40px;
+  overflow-y: auto;
+  height: calc(100% - 90px);
+}
+
+aside section ul {
+  list-style-type: none;
+}
+
+aside section ul a {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+aside section a {
+  height: 50px;
+  min-width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #707070;
+}
+
+aside section ul li {
+  width: 100%;
+}
+
+aside section a:hover {
+  background-color: #4070f4;
+  color: white;
+}
+
+aside section a > * {
+  margin: 5px;
+}
+
+aside section a .menu-icon {
+  font-size: 1.5rem;
+}
+
+aside section a:hover .menu-icon {
+  animation: shake 0.3s linear 0.2s 2;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+footer > * {
+  margin: 5px;
+  font-style: italic;
+  color: grey;
+}
+
+@keyframes shake {
+  0%   { transform: rotate(0); }
+  30%  { transform: rotate(-15deg); }
+  50%  { transform: rotate(0); }
+  70%  { transform: rotate(15deg); }
+  100% { transform: rotate(0); }
+}

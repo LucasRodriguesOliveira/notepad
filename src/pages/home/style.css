@@ -1,0 +1,147 @@
+main {
+  margin: 50px;
+  display: grid;
+  transition: 0.8s linear;
+}
+
+main.sidebar-closed {
+  gap: 15px;
+  grid-template-columns: repeat(auto-fill, 25vw);
+  transition: 0.8s linear;
+}
+
+main.sidebar-open {
+  margin-left: 300px;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, 30vw);
+  transition: 0.8s linear;
+}
+
+.add-box, .note {
+  height: 250px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 16px 20px 20px;
+}
+
+.add-box, .add-box .icon, .bottom-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-box {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.add-box .icon {
+  cursor: pointer;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
+  border: 2px dashed #88ABFF;
+  border-radius: 50%;
+  color: #88ABFF;
+  font-size: 40px;
+}
+
+.add-box p {
+  color: #88ABFF;
+  font-weight: bold;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.note p {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.details span {
+  display: block;
+  margin-top: 5px;
+  color: #575757;
+  font-size: 16px;
+}
+
+.note .details span {
+  max-width: 225px;
+  overflow: hidden;
+  height: 100px;
+}
+
+.note .bottom-content {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.bottom-content span {
+  color: #6d6d6d;
+  font-size: 14px;
+}
+
+.bottom-content .settings {
+  color: #6d6d6d;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.bottom-content {
+  align-items: baseline;
+}
+
+.settings {
+  position: relative;
+}
+
+.bottom-content .settings .menu {
+  position: absolute;
+  bottom: 0;
+  right: -5px;
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgb(0 0 0 / .15);
+  background-color: white;
+  padding: 4px;
+  transform: scale(0);
+  transform-origin: bottom right;
+  transition: transform .2s linear;
+}
+
+.settings:hover .menu {
+  transform: scale(1);
+}
+
+.bottom-content .settings .menu > * {
+  border-radius: 0;
+}
+
+.menu span {
+  padding: 8px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  font-size: 16px;
+}
+
+.menu span:hover {
+  background-color: #f5f5f5;
+}
+
+.menu span > * {
+  margin-right: 5px;
+}
+
+.menu span.edit:hover {
+  color: #88ABFF;
+}
+
+.menu span.remove:hover {
+  color: tomato;
+}

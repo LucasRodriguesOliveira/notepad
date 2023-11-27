@@ -1,0 +1,28 @@
+nav {
+  background-color: #4070f4;
+  padding: 8px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / .15),
+              0 3px 6px rgb(0 0 0 / .25);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: var(--toolbar-height);
+}
+
+.menu-button {
+  color: white;
+  font-size: 1.5rem;
+  margin: 5px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.logo {
+  text-align: center;
+  flex-grow: 1;
+  color: white;
+}
+
+.logo::selection {
+  background-color: transparent;
+}
